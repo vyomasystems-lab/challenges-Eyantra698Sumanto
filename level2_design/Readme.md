@@ -1,28 +1,47 @@
 # challenges-Eyantra698Sumanto
 challenges-Eyantra698Sumanto created by GitHub Classroom
-# Adder Design Verification
+# Mkbitmanip Design Verification
 
 The verification environment is setup using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
 
-
-![](https://i.imgur.com/miWGA1o.png)
+![image](https://user-images.githubusercontent.com/58599984/180622080-aa88e484-e9e6-43e1-b23b-8fecc002be15.png)
 
 ## Verification Environment
 
-The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (adder module here) which takes in 4-bit inputs *a* and *b* and gives 5-bit output *sum*
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (Mkbitmanip module here) which has following input and output ports:
+ ``` input  CLK;
+  input  RST_N;
 
-The values are assigned to the input port using 
-```
-dut.a.value = 7
-dut.b.value = 5
-```
+  // actionvalue method mav_putvalue
+  input  [31 : 0] mav_putvalue_instr;
+  input  [31 : 0] mav_putvalue_src1;
+  input  [31 : 0] mav_putvalue_src2;
+  input  [31 : 0] mav_putvalue_src3;
+  input  EN_mav_putvalue;
+  output [32 : 0] mav_putvalue;
+  output RDY_mav_putvalue;
 
-The assert statement is used for comparing the adder's outut to the expected value.
+  // value method mv_scopbusy
+  output mv_scopbusy;
+  output RDY_mv_scopbusy;
+  ```
+
+The randomly values are assigned to the input port using 
+
+```random.randint(0, pow(2,32)-1)```
+
+The expected output is calculated by:
+```
+expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
+```
+where ```bitmanip``` is a function modelled(already given in the Hackathon) to calculate the expected output
+
+The assert statement is used for comparing the Mkbitmanip's output to the expected value.
 
 The following error is seen:
 ```
-assert dut.sum.value == A+B, "Adder result is incorrect: {A} + {B} != {SUM}, expected value={EXP}".format(
-                     AssertionError: Adder result is incorrect: 7 + 5 != 2, expected value=12
+error_message = f'Value mismatch DUT = {hex(dut_output)} does not match MODEL = {hex(expected_mav_putvalue)}'
+    assert dut_output == expected_mav_putvalue, error_message
 ```
 ## Test Scenario **(Important)**
 
