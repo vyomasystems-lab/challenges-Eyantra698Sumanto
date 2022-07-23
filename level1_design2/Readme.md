@@ -10,7 +10,7 @@ The verification environment is setup using [Vyoma's UpTickPro](https://vyomasys
 
 ## Verification Environment
 
-The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (adder module here) which take 'clk', 'reset', 'sequence' as the iput and 
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (adder module here) which takes   '''inp_bit, reset, clk''' as the input and '''seq_seen''' as the output.
 
 The values are assigned to the input port using 
 ```
