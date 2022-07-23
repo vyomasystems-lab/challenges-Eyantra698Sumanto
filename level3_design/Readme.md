@@ -4,7 +4,7 @@ challenges-Eyantra698Sumanto created by GitHub Classroom
 
 The verification environment is setup using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
 
-![]https://user-images.githubusercontent.com/58599984/180623762-b1eb3b17-b096-4bd0-801a-e3b754eddf29.png
+![image](https://user-images.githubusercontent.com/58599984/180623762-b1eb3b17-b096-4bd0-801a-e3b754eddf29.png)
 
 ## Verification Environment
 
