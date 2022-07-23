@@ -13,14 +13,13 @@ The values are randomly assigned.
 
 The assert statement is used for comparing the adder's outut to the expected value.
 
-1. Compilation Error:
-[Link](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level1_design1/mux_compilebug.v)
+1. [Compilation Error](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level1_design1/mux_compilebug.v)
 ![image](https://user-images.githubusercontent.com/58599984/180593173-e44dc3f9-2afb-4a48-b635-2ad085603699.png)
 
-2. Bug-1:
+2. [Bug-1](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level1_design1/mux_bug1.v)
 ![image](https://user-images.githubusercontent.com/58599984/180593255-c3b69bc5-fbc0-4276-ac8a-06085dd4006e.png)
 
-3. Bug-2:
+3. [Bug-2](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level1_design1/mux_bug2.v)
 ![image](https://user-images.githubusercontent.com/58599984/180593696-b43c256b-4adf-4bc2-9243-8516564af210.png)
 
 
