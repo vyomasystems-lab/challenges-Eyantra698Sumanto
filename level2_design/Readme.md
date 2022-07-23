@@ -31,23 +31,21 @@ assert dut.sum.value == A+B, "Adder result is incorrect: {A} + {B} != {SUM}, exp
 
 Output mismatches for the above inputs proving that there is a design bug
 
-## Design Bug
-Based on the above test input and analysing the design, we see the following
+## Design Bug Cases
+1. ANDN
 
+## Design Pass Cases
+1. ORN
+Inputs:
 ```
- always @(a or b) 
-  begin
-    sum = a - b;             ====> BUG
-  end
+    mav_putvalue_src1 =  0b00000000000000000000000
+    mav_putvalue_src2 =  0b11111111111111111111111111111111
+    mav_putvalue_src3 =  0b00000000000000000000000000000000
+    mav_putvalue_instr = 0b01000000000000000110000000110011
 ```
-For the adder design, the logic should be ``a + b`` instead of ``a - b`` as in the design code.
+Outputs:
+![image](https://user-images.githubusercontent.com/58599984/180601412-e12230c9-41aa-4b3a-9b9e-8d4fd144eeb7.png)
 
-## Design Fix
-Updating the design and re-running the test makes the test pass.
-
-![](https://i.imgur.com/5XbL1ZH.png)
-
-The updated design is checked in as adder_fix.v
 
 ## Verification Strategy
 
