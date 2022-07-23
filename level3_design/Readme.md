@@ -130,5 +130,10 @@ Also, verifying for all cases in iterative fashion:
 Thus, indicates the test cases are passed.
 
 ## Verification Strategy
+We have used cocotb design environment and wrote the testbench in python and verified it for each test case with random set of inputs.
 
+We have also verified all the cases in an iterative manner.
+
+There is  no involvement of clock as the DUT is combinational vedic 8x8 multiplier.
 ## Is the verification complete ?
+Yes, the verification is complete as we have verified the design for all the possible test-cases using the cocotb python testbench.
