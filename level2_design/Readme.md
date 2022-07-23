@@ -181,15 +181,9 @@ error_message = f'Value mismatch DUT = {hex(dut_output)} does not match MODEL = 
 
 
 
-
-
-
-
-
-
-
-
-
 ## Verification Strategy
+We have used cocotb design environment and wrote the testbench in python and verified it for each test case with random set of inputs.
 
+There is  involvement of clock as the DUT is sequential.
 ## Is the verification complete ?
+Yes, the verification is complete as we have verified the design for all the possible test-cases.
