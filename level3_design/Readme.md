@@ -115,7 +115,7 @@ The buggy lines need to be replaced by:
 ```
 	ripple_adder_6bit RA0(a[5:0],b[5:0],cin,sum[5:0],carry);
   ```
-## {Design Fix](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level3_design/vedic8x8_fix.v)
+## [Design Fix](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level3_design/vedic8x8_fix.v)
 Updating the design and re-running the test makes the test pass.
 
 ![image](https://user-images.githubusercontent.com/58599984/180625392-ff313990-0fce-40b9-8a64-74b8acec95f6.png)
