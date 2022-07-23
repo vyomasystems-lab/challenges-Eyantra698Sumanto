@@ -69,4 +69,4 @@ We have used cocotb design environment and wrote the testbench in python.
 
 There is no involvement of clock as the DUT is sequential.
 ## Is the verification complete ?
-Yes, the verification is complete.
+Yes, the verification is complete as we have verified the design for all the possible test-cases.
