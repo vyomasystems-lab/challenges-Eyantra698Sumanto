@@ -90,29 +90,29 @@ assert dut.sum.value == A+B, "Adder result is incorrect: {A} + {B} != {SUM}, exp
 ![image](https://user-images.githubusercontent.com/58599984/180611010-2f9b40cb-cf84-4ef5-ad53-6fa4265fe1c7.png)
 ### 24. SEXT.B
 ![image](https://user-images.githubusercontent.com/58599984/180611110-433525d5-d309-4aea-b0b3-f684e1095c45.png)
-### 26. SEXT.H
+### 25. SEXT.H
 ![image](https://user-images.githubusercontent.com/58599984/180611150-5c4c4998-dd49-423a-8ca4-19cfd3698e34.png)
-### 27. CRC32.B
+### 26. CRC32.B
 ![image](https://user-images.githubusercontent.com/58599984/180611215-61d9d8fe-a860-4b8a-8db9-c3a155f58a49.png)
-### 28. CRC32.H
+### 27. CRC32.H
 ![image](https://user-images.githubusercontent.com/58599984/180611256-15b067eb-5383-4438-987f-e77277b4ca03.png)
-### 29. CRC32.W
+### 28. CRC32.W
 ![image](https://user-images.githubusercontent.com/58599984/180611300-d47b02b4-2397-4c9c-8e25-c105e8027303.png)
-### 30. CRC32C.B
+### 29. CRC32C.B
 ![image](https://user-images.githubusercontent.com/58599984/180611359-9a6fdb2e-55ca-41fc-9acf-e67700749c4a.png)
-### 31. CRC32C.H
+### 30. CRC32C.H
 ![image](https://user-images.githubusercontent.com/58599984/180611415-af6f1f10-db45-40ce-9056-d2d7cfa91b4d.png)
-### 32. CRC32C.W
+### 31. CRC32C.W
 ![image](https://user-images.githubusercontent.com/58599984/180611461-bc9a8b4b-9aa8-4bff-a4f3-12c785a10cf5.png)
-### 33. CLMUL
+### 32. CLMUL
 ![image](https://user-images.githubusercontent.com/58599984/180611502-b0c837ae-38c8-433e-ba6a-f4cd150afb22.png)
-### 34. CLMULH
+### 33. CLMULH
 ![image](https://user-images.githubusercontent.com/58599984/180611597-44646c74-7833-42f7-8912-c1e6fcca9667.png)
-### 35. CLMULR
+### 34. CLMULR
 ![image](https://user-images.githubusercontent.com/58599984/180611779-889127bb-6772-4869-922b-26ed7a4d26e3.png)
-### 36. MIN
+### 35. MIN
 ![image](https://user-images.githubusercontent.com/58599984/180611841-423b6f9e-3ecf-4f86-8b72-2fb7e01cf2ad.png)
-37. 
+### 35. MAX
 
 
 
