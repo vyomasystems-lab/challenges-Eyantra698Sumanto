@@ -58,8 +58,10 @@ The assert statement is used for comparing the sequence detector's output to the
 
 ## Test Scenario **(Important)**
 Random test cases:
-1. ![image](https://user-images.githubusercontent.com/58599984/180595135-ef287e54-d35f-48de-87e6-3fdd40f1a253.png)
-2. ![image](https://user-images.githubusercontent.com/58599984/180595151-d738709d-4e5b-409e-95bf-176637eb9d34.png)
+### Test Scenario 1. 
+![image](https://user-images.githubusercontent.com/58599984/180595135-ef287e54-d35f-48de-87e6-3fdd40f1a253.png)
+### Test Scenario 2.
+![image](https://user-images.githubusercontent.com/58599984/180595151-d738709d-4e5b-409e-95bf-176637eb9d34.png)
 
 
 
