@@ -36,9 +36,10 @@ Output mismatches for the above inputs proving that there is a design bug
 
 ## Design Pass Cases
 1. ORN
+
 Inputs:
 ```
-    mav_putvalue_src1 =  0b00000000000000000000000
+    mav_putvalue_src1 =  0b00000000000000000000000111100101
     mav_putvalue_src2 =  0b11111111111111111111111111111111
     mav_putvalue_src3 =  0b00000000000000000000000000000000
     mav_putvalue_instr = 0b01000000000000000110000000110011
