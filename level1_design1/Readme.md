@@ -25,7 +25,7 @@ The assert statement is used for comparing the adder's outut to the expected val
 ![image](https://user-images.githubusercontent.com/58599984/180593255-c3b69bc5-fbc0-4276-ac8a-06085dd4006e.png)
 
 3. Bug-2:
-![image](https://user-images.githubusercontent.com/58599984/180593301-69e5e5f8-679a-4b8c-a70b-bf60a54f8a03.png)
+![image](https://user-images.githubusercontent.com/58599984/180593696-b43c256b-4adf-4bc2-9243-8516564af210.png)
 
 
 ## Design Bug
@@ -46,17 +46,6 @@ module mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
             
 ```
 
-```
-      5'b11010: out = inp26;
-      5'b11011: out = inp27;
-      5'b11100: out = inp28;
-      5'b11101: out = inp29;   ===> inp30, inp31 missing
-      default: out = 0;
-    endcase
-  end
-
-endmodule 
-```
 2. Bug-1:
 ```
      5'b01010: out = inp10;
@@ -65,7 +54,15 @@ endmodule
       5'b01101: out = inp13;
 ```
 3. Bug-2:
-
+```
+      5'b11010: out = inp26;
+      5'b11011: out = inp27;
+      5'b11100: out = inp28;
+      5'b11101: out = inp29;   ===> inp30, inp31 missing
+      default: out = 0;
+    endcase
+  end
+```
 ## Design Fix
 Updating the design and re-running the test makes the test pass.
 
