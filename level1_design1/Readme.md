@@ -1,20 +1,15 @@
-# Adder Design Verification
+# Mux Design Verification
 
 The verification environment is setup using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
 
-*Make sure to include the Gitpod id in the screenshot*
 
-![](https://i.imgur.com/miWGA1o.png)
+![image](https://user-images.githubusercontent.com/58599984/180593756-99704718-64fb-4dea-8792-95ec17070cbe.png)
 
 ## Verification Environment
 
-The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (adder module here) which takes in 4-bit inputs *a* and *b* and gives 5-bit output *sum*
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (adder module here) which takes in randomly assign inputs.
 
-The values are assigned to the input port using 
-```
-dut.a.value = 7
-dut.b.value = 5
-```
+The values are randomly assigned.
 
 The assert statement is used for comparing the adder's outut to the expected value.
 
@@ -71,5 +66,8 @@ Updating the design and re-running the test makes the test pass.
 The updated design is checked in as mux_fixed.v
 
 ## Verification Strategy
+We have used cocotb design environment and wrote the testbench in python.
 
+There is no invovemnet of clock as the DUT is sequential.
 ## Is the verification complete ?
+Yes, the verification is complete.
