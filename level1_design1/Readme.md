@@ -61,7 +61,7 @@ Updating the design and re-running the test makes the test pass.
 
 ![image](https://user-images.githubusercontent.com/58599984/180593414-a87ad627-6e9c-4fac-af8c-3cccc5c89b80.png)
 
-The updated design is checked in as mux_fixed.v
+The updated design is checked in as [mux_fix.v](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level1_design1/mux_fix.v)
 
 ## Verification Strategy
 We have used cocotb design environment and wrote the testbench in python.
