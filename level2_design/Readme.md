@@ -37,15 +37,15 @@ Output mismatches for the above inputs proving that there is a design bug
 ## Design Pass Cases
 1. ORN
 
-Inputs:
-```
+  Inputs:
+  ```
     mav_putvalue_src1 =  0b00000000000000000000000111100101
     mav_putvalue_src2 =  0b11111111111111111111111111111111
     mav_putvalue_src3 =  0b00000000000000000000000000000000
     mav_putvalue_instr = 0b01000000000000000110000000110011
-```
-Outputs:
-![image](https://user-images.githubusercontent.com/58599984/180601412-e12230c9-41aa-4b3a-9b9e-8d4fd144eeb7.png)
+  ```
+  Outputs:
+  ![image](https://user-images.githubusercontent.com/58599984/180601412-e12230c9-41aa-4b3a-9b9e-8d4fd144eeb7.png)
 
 
 ## Verification Strategy
