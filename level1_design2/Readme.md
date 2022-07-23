@@ -73,8 +73,10 @@ No error/bug has been identified in this design from functional point of view.
 
 As no error has been identified, the design need not be fixed.
 
+
 ## Verification Strategy
+We have used cocotb design environment and wrote the testbench in python.
 
-
-
+There is no involvement of clock as the DUT is sequential.
 ## Is the verification complete ?
+Yes, the verification is complete.
