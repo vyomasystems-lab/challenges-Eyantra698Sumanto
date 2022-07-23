@@ -18,11 +18,15 @@ dut.b.value = 5
 
 The assert statement is used for comparing the adder's outut to the expected value.
 
-The following error is seen:
-```
-assert dut.sum.value == A+B, "Adder result is incorrect: {A} + {B} != {SUM}, expected value={EXP}".format(
-                     AssertionError: Adder result is incorrect: 7 + 5 != 2, expected value=12
-```
+1. Compilation Error:
+![image](https://user-images.githubusercontent.com/58599984/180593173-e44dc3f9-2afb-4a48-b635-2ad085603699.png)
+
+2. Bug-1:
+![image](https://user-images.githubusercontent.com/58599984/180593255-c3b69bc5-fbc0-4276-ac8a-06085dd4006e.png)
+
+3. Bug-2:
+![image](https://user-images.githubusercontent.com/58599984/180593301-69e5e5f8-679a-4b8c-a70b-bf60a54f8a03.png)
+
 ## Test Scenario **(Important)**
 - Test Inputs: a=7 b=5
 - Expected Output: sum=12
