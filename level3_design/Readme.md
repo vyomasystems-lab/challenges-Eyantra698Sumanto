@@ -1,6 +1,6 @@
 # challenges-Eyantra698Sumanto
 challenges-Eyantra698Sumanto created by GitHub Classroom
-# Adder Design Verification
+# Vedic 8x8 Multiplier Design Verification
 
 The verification environment is setup using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
 
