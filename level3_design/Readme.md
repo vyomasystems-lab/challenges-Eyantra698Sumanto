@@ -26,29 +26,105 @@ assert dut.sum.value == A+B, "Adder result is incorrect: {A} + {B} != {SUM}, exp
                      AssertionError: Adder result is incorrect: 7 + 5 != 2, expected value=12
 ```
 ## Test Scenario **(Important)**
-- Test Inputs: a=7 b=5
-- Expected Output: sum=12
-- Observed Output in the DUT dut.sum=2
+- Test Inputs A and B: Randmodized
+- Expected Output: A*B
+- Observed Output in the DUT not matching Expected Output
 
 Output mismatches for the above inputs proving that there is a design bug
 
 ## Design Bug
 Based on the above test input and analysing the design, we see the following
-
+### BUG 1
+Output: 
+![image](https://user-images.githubusercontent.com/58599984/180625131-4dd4810b-b565-4ae6-aeeb-3cd0afc039a9.png)
+Bug:
 ```
- always @(a or b) 
-  begin
-    sum = a - b;             ====> BUG
-  end
-```
-For the adder design, the logic should be ``a + b`` instead of ``a - b`` as in the design code.
+module vedic2x2(input [1:0] a,b, output [3:0] prod);
 
+	wire a1b1 = a[1] & b[1];
+	wire a0b1 = a[0] & b[1];
+	wire a1b0 = a[1] & b[0];
+	wire a0b0 = a[0] | b[0]; ==================> BUG
+	wire carry;
+	
+	assign prod[0] = a0b0;
+
+	half_adder HA0(a0b1,a1b0,prod[1],carry);
+	half_adder HA1(a1b1,carry,prod[2],prod[3]);
+
+endmodule
+```
+The buggy lines need to be replaced by:
+```
+wire a0b0 = a[0] & b[0];
+  ```
+### BUG 2
+Output after fixing Bug 1:
+![image](https://user-images.githubusercontent.com/58599984/180625172-795e12e8-3a0b-4900-b3c6-5c6bc05b1d14.png)
+Bug:
+```
+module half_adder(input a,b, output sum, carry);
+
+	assign sum = a | b;       ==================> BUG
+	assign carry = a ^ b;     ==================> BUG
+
+endmodule
+```
+The buggy lines need to be replaced by:
+```
+	assign sum = a ^ b;       ==================> BUG
+	assign carry = a & b;     ==================> BUG
+  ```
+### BUG 3
+Output after fixing Bug 2:
+
+![image](https://user-images.githubusercontent.com/58599984/180625193-f08d9261-2d34-46e9-809d-258c35e0896d.png)
+
+Bug:
+```module ripple_adder_6bit(input [5:0] a,b, input cin, output [5:0] sum, output cout);
+
+	wire carry1, carry2, carry3, carry4, carry5;
+
+	full_adder FA0(a[0],b[0],cin,sum[0],carry1);
+	full_adder FA1(a[1],a[1],carry1,sum[1],carry2); ==================> BUG
+	full_adder FA2(a[2],b[2],carry2,sum[2],carry3);
+	full_adder FA3(a[3],b[3],carry3,sum[3],carry4);
+	full_adder FA4(a[4],b[4],carry4,sum[4],carry5);
+	full_adder FA5(a[5],b[5],carry5,sum[5],cout);
+
+endmodule
+```
+The buggy lines need to be replaced by:
+```
+	full_adder FA1(a[1],b[1],carry1,sum[1],carry2);
+  ```
+### BUG 4
+Output after fixing Bug 3:
+![image](https://user-images.githubusercontent.com/58599984/180625247-b018dfdf-5205-4184-b02f-747bfcd4b829.png)
+Bug:
+```
+module ripple_adder_12bit(input [11:0] a,b, input cin, output [11:0] sum, output cout);
+
+	wire carry;
+
+	ripple_adder_6bit RA0(a[5:0],a[5:0],cin,sum[5:0],carry); ==========> BUG
+	ripple_adder_6bit RA1(a[11:6],b[11:6],carry,sum[11:6],cout);
+
+endmodule
+```
+The buggy lines need to be replaced by:
+```
+	ripple_adder_6bit RA0(a[5:0],b[5:0],cin,sum[5:0],carry);
+  ```
 ## Design Fix
 Updating the design and re-running the test makes the test pass.
 
-![](https://i.imgur.com/5XbL1ZH.png)
+![image](https://user-images.githubusercontent.com/58599984/180625392-ff313990-0fce-40b9-8a64-74b8acec95f6.png)
 
-The updated design is checked in as adder_fix.v
+
+![image](https://user-images.githubusercontent.com/58599984/180625405-747ea95d-510a-40ba-bd25-e2a3d2e683c2.png)
+
+The updated design is checked in as vedic8x8_fix.v
 
 ## Verification Strategy
 
