@@ -26,15 +26,13 @@ The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explaine
   output RDY_mv_scopbusy;
   ```
 
-The randomly values are assigned to the input port using 
-
-```random.randint(0, pow(2,32)-1)```
+The randomly values are assigned to the input port using  ```random.randint(0, pow(2,32)-1)```.
 
 The expected output is calculated by:
 ```
 expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
 ```
-where ```bitmanip``` is a function modelled(already given in the Hackathon) to calculate the expected output
+where ```bitmanip``` is a function modelled(already given in the Hackathon) to calculate the expected output.
 
 The assert statement is used for comparing the Mkbitmanip's output to the expected value.
 
