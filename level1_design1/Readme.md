@@ -63,7 +63,7 @@ endmodule
       5'b01011: out = inp11;
       5'b01101: out = inp12;   ======> wrong case
       5'b01101: out = inp13;
-      ```
+```
 3. Bug-2:
 
 ## Design Fix
