@@ -57,7 +57,14 @@ module mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
 
 endmodule 
 ```
-For the adder design, the logic should be ``a + b`` instead of ``a - b`` as in the design code.
+2. Bug-1:
+```
+     5'b01010: out = inp10;
+      5'b01011: out = inp11;
+      5'b01101: out = inp12;   ======> wrong case
+      5'b01101: out = inp13;
+      ```
+3. Bug-2:
 
 ## Design Fix
 Updating the design and re-running the test makes the test pass.
