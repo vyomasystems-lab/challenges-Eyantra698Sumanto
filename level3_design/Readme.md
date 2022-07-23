@@ -125,6 +125,10 @@ Updating the design and re-running the test makes the test pass.
 
 The updated design is checked in as vedic8x8_fix.v
 
+Also, verifying for all cases in iterative fashion:
+![image](https://user-images.githubusercontent.com/58599984/180625462-1d7c7a5b-08b7-485d-b342-ff55492f4545.png)
+Thus, indicates the test cases are passed.
+
 ## Verification Strategy
 
 ## Is the verification complete ?
