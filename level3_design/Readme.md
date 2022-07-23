@@ -4,26 +4,25 @@ challenges-Eyantra698Sumanto created by GitHub Classroom
 
 The verification environment is setup using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
 
-*Make sure to include the Gitpod id in the screenshot*
-
-![](https://i.imgur.com/miWGA1o.png)
+![]https://user-images.githubusercontent.com/58599984/180623762-b1eb3b17-b096-4bd0-801a-e3b754eddf29.png
 
 ## Verification Environment
 
-The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (adder module here) which takes in 4-bit inputs *a* and *b* and gives 5-bit output *sum*
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (vedic8x8 multiplier module here) which takes in 8-bit inputs *a* and *b* and gives 16-bit output *prod*
 
 The values are assigned to the input port using 
 ```
-dut.a.value = 7
-dut.b.value = 5
+dut.a.value = a
+dut.b.value = b
 ```
+where a and b are some randomized 8 bit numbers.
 
-The assert statement is used for comparing the adder's outut to the expected value.
+The assert statement is used for comparing the vedic8x8's outut to the expected value.
 
 The following error is seen:
 ```
-assert dut.sum.value == A+B, "Adder result is incorrect: {A} + {B} != {SUM}, expected value={EXP}".format(
-                     AssertionError: Adder result is incorrect: 7 + 5 != 2, expected value=12
+    error_message = f'Value mismatch DUT = {hex(dut_output)} does not match MODEL = {hex(expected_output)}'
+    assert dut_output == expected_output, error_message
 ```
 ## Test Scenario **(Important)**
 - Test Inputs A and B: Randmodized
