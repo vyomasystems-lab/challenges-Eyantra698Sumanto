@@ -68,6 +68,6 @@ The updated design is checked in as mux_fixed.v
 ## Verification Strategy
 We have used cocotb design environment and wrote the testbench in python.
 
-There is no invovemnet of clock as the DUT is sequential.
+There is no involvemnet of clock as the DUT is sequential.
 ## Is the verification complete ?
 Yes, the verification is complete.
