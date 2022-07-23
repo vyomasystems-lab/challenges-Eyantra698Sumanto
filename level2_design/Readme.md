@@ -112,7 +112,58 @@ assert dut.sum.value == A+B, "Adder result is incorrect: {A} + {B} != {SUM}, exp
 ![image](https://user-images.githubusercontent.com/58599984/180611779-889127bb-6772-4869-922b-26ed7a4d26e3.png)
 ### 35. MIN
 ![image](https://user-images.githubusercontent.com/58599984/180611841-423b6f9e-3ecf-4f86-8b72-2fb7e01cf2ad.png)
-### 35. MAX
+### 36. MAX
+![image](https://user-images.githubusercontent.com/58599984/180620412-369a80a6-d8d8-44d9-8f5c-543c9cee7bdf.png)
+### 37. MINU
+![image](https://user-images.githubusercontent.com/58599984/180620465-f8f41cfa-440b-4698-aa67-499fb862e72a.png)
+### 38. MAXU
+![image](https://user-images.githubusercontent.com/58599984/180620700-df4fd1bc-1c7f-4147-93c8-c70ceaf97d2a.png)
+### 39. BDEP
+![image](https://user-images.githubusercontent.com/58599984/180620738-1f1f0e28-7074-4cd8-9521-6e00fa924a8c.png)
+### 40. BEXT
+![image](https://user-images.githubusercontent.com/58599984/180620772-cac359cf-7581-411c-adb4-ff05264042b2.png)
+### 41. PACK
+![image](https://user-images.githubusercontent.com/58599984/180620867-09060b76-1922-4d15-aac5-ccf03c25b122.png)
+### 42. PACKU
+![image](https://user-images.githubusercontent.com/58599984/180620860-f89c8a2f-2631-4596-af47-76fe43a274b8.png)
+### 45. PACKH
+![image](https://user-images.githubusercontent.com/58599984/180620914-ac594ee1-d8f7-409d-beaf-b829fb0d3ee8.png)
+### 46. SLOI
+![image](https://user-images.githubusercontent.com/58599984/180620970-73873b39-3bc4-49b6-b493-06560f9e1c60.png)
+### 47. SROI
+![image](https://user-images.githubusercontent.com/58599984/180621022-6dbea317-34a1-4d25-9d26-339765e9f03c.png)
+### 48. RORI
+![image](https://user-images.githubusercontent.com/58599984/180621037-659ff69e-271b-41ef-8fe0-1c58069b94b3.png)
+### 49. SBCLRI
+![image](https://user-images.githubusercontent.com/58599984/180621066-2ba32c74-08f2-472d-988f-91cd6a03b890.png)
+### 50. SBSETI
+![image](https://user-images.githubusercontent.com/58599984/180621090-81ee17e5-1ab9-43a2-b7be-22f7a7fcc283.png)
+### 51. SBINVI
+![image](https://user-images.githubusercontent.com/58599984/180621141-c5bb180f-68cb-46e9-9aa2-f99105babca2.png)
+### 52. SBEXTI
+![image](https://user-images.githubusercontent.com/58599984/180621272-5e9c7623-ad28-4ca8-bc71-59636a079248.png)
+### 53. SHFL
+![image](https://user-images.githubusercontent.com/58599984/180621302-a4773077-098b-445d-9d39-ba604dba4a5a.png)
+### 54. UNSHFL
+![image](https://user-images.githubusercontent.com/58599984/180621337-e0b09e31-6a2b-478b-ad79-622391b5f2cd.png)
+### 55. SHFLI
+![image](https://user-images.githubusercontent.com/58599984/180621547-10cd9fd2-8743-426f-9513-2c4a98aac4c8.png)
+### 56. UNSHFLI
+![image](https://user-images.githubusercontent.com/58599984/180621574-a64cc464-c338-4863-bf78-dc752c141eba.png)
+### 57. GORCI
+![image](https://user-images.githubusercontent.com/58599984/180621606-88778dcf-d88d-4d7d-92e4-7d97a1bb4965.png)
+### 58. GREVI
+![image](https://user-images.githubusercontent.com/58599984/180621639-78f28fdb-97f8-4d03-a195-1794a35dc9dd.png)
+
+### 59. FSRI
+![image](https://user-images.githubusercontent.com/58599984/180621674-a1758b33-5cda-4973-8d09-2cddd45678f6.png)
+### 60. BFP
+![image](https://user-images.githubusercontent.com/58599984/180621777-02009c44-3b10-497c-a5aa-c93c66ca108b.png)
+
+
+
+
+
 
 
 
