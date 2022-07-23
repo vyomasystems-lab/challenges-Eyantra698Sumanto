@@ -3,8 +3,7 @@ challenges-Eyantra698Sumanto created by GitHub Classroom
 # Mkbitmanip Design Verification
 
 The verification environment is setup using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
-
-![image](https://user-images.githubusercontent.com/58599984/180622080-aa88e484-e9e6-43e1-b23b-8fecc002be15.png)
+![image](https://user-images.githubusercontent.com/58599984/180623762-b1eb3b17-b096-4bd0-801a-e3b754eddf29.png)
 
 ## Verification Environment
 
