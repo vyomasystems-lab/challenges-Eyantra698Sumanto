@@ -33,7 +33,7 @@ Output mismatches for the above inputs proving that there is a design bug
 
 ## Design Bug
 Based on the above test input and analysing the design, we see the following
-### BUG 1
+### [BUG 1](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level3_design/vedic8x8_bug1.v)
 Output: 
 ![image](https://user-images.githubusercontent.com/58599984/180625131-4dd4810b-b565-4ae6-aeeb-3cd0afc039a9.png)
 Bug:
@@ -57,7 +57,7 @@ The buggy lines need to be replaced by:
 ```
 wire a0b0 = a[0] & b[0];
   ```
-### BUG 2
+### [BUG 2](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level3_design/vedic8x8_bug2.v)
 Output after fixing Bug 1:
 ![image](https://user-images.githubusercontent.com/58599984/180625172-795e12e8-3a0b-4900-b3c6-5c6bc05b1d14.png)
 Bug:
@@ -74,7 +74,7 @@ The buggy lines need to be replaced by:
 	assign sum = a ^ b;       ==================> BUG
 	assign carry = a & b;     ==================> BUG
   ```
-### BUG 3
+### [BUG 3](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level3_design/vedic8x8_bug3.v)
 Output after fixing Bug 2:
 
 ![image](https://user-images.githubusercontent.com/58599984/180625193-f08d9261-2d34-46e9-809d-258c35e0896d.png)
@@ -97,7 +97,7 @@ The buggy lines need to be replaced by:
 ```
 	full_adder FA1(a[1],b[1],carry1,sum[1],carry2);
   ```
-### BUG 4
+### [BUG 4](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level3_design/vedic8x8_bug4.v)
 Output after fixing Bug 3:
 ![image](https://user-images.githubusercontent.com/58599984/180625247-b018dfdf-5205-4184-b02f-747bfcd4b829.png)
 Bug:
@@ -115,7 +115,7 @@ The buggy lines need to be replaced by:
 ```
 	ripple_adder_6bit RA0(a[5:0],b[5:0],cin,sum[5:0],carry);
   ```
-## Design Fix
+## {Design Fix](https://github.com/vyomasystems-lab/challenges-Eyantra698Sumanto/blob/master/level3_design/vedic8x8_fix.v)
 Updating the design and re-running the test makes the test pass.
 
 ![image](https://user-images.githubusercontent.com/58599984/180625392-ff313990-0fce-40b9-8a64-74b8acec95f6.png)
